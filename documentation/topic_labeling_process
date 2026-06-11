@@ -1,73 +1,119 @@
 # Topic Labeling Process
 
-This document describes the topic labeling procedure used for the final BERTopic model in the master thesis analysis. It is included to make the interpretation process more transparent without sharing original Reddit post texts.
+This document describes the topic labeling procedure used for the BERTopic model in the master thesis analysis.
 
-## Purpose
+The purpose of this documentation is to make the labeling process more transparent without sharing original Reddit post texts. The original posts are not included in this repository for ethical reasons.
 
-The topic labels were created to provide interpretable summaries of the thematic clusters identified by BERTopic. Because topic models produce statistical clusters rather than ready-made psychological categories, the final labels were developed through a combination of computational output inspection and researcher-led qualitative interpretation.
+## Overview
 
-## Topic Information Used for Labeling
+The final BERTopic model identified eight interpretable topic clusters and one outlier category. Topic `-1` represents posts that were not assigned to a coherent topic cluster by the model and was therefore treated as an outlier category rather than as an interpretable topic.
 
-After fitting the final BERTopic model, topic-level information was exported and inspected. The labeling process was based on:
+The topic labels were developed through an iterative interpretation process combining:
 
-* topic IDs,
-* topic sizes,
-* the ten highest-ranked keywords per topic,
-* the three posts with the highest topic probability scores per topic,
-* topic probability information,
-* and the broader thematic focus of each cluster.
+1. BERTopic-generated topic information,
+2. researcher-led qualitative interpretation,
+3. AI-assisted preliminary label suggestions, and
+4. final researcher-led synthesis.
 
-This made it possible to consider both keyword-based topic representations and the contextual meaning of posts that were strongly assigned to each topic.
+The final topic labels are reported in:
 
-## Researcher-Led Initial Labels
+`tables/table_02_topic_summary_labeled.csv`
 
-The first topic labels were developed manually by the researcher. For each topic, the highest-ranked keywords and the highest-probability posts were reviewed to identify the main narrative focus of the cluster.
+## Step 1: Exporting Topic Information
 
-The aim was not to label topics based on isolated keywords alone, but to interpret what kind of abusive relationship narrative each cluster represented. Particular attention was given to whether a topic mainly concerned leaving, custody concerns, trauma bonding, self-blame, abuse recognition, coercive control, post-separation harassment, emotional manipulation, or recovery after abuse.
+After fitting the final BERTopic model, topic-level metadata were exported for qualitative inspection. This included:
 
-## AI-Assisted Label Suggestions
+- topic ID,
+- topic size,
+- representative keywords,
+- c-TF-IDF-based topic representations,
+- topic probabilities,
+- high-probability example posts,
+- and document-level topic assignments.
 
-In a second step, ChatGPT was used to generate additional label suggestions based on the same topic-level information. This was used as an interpretive support tool only.
+These outputs were used to inspect both the statistical structure of the topic model and the qualitative meaning of the identified clusters.
 
-The AI-generated labels were compared with the researcher-generated labels. In some cases, AI-assisted suggestions helped refine the phrasing of a label or identify a broader thematic pattern. In other cases, the researcher-generated label was retained because it better reflected the contextual meaning of the topic.
+## Step 2: Researcher-Led Initial Labeling
 
-## Final Label Selection
+Initial topic labels were developed manually by the researcher.
 
-The final topic labels were selected through researcher-led synthesis. The final labels were based on:
+For each topic, the researcher reviewed:
 
-* semantic fit with the topic keywords,
-* fit with the highest-probability posts,
-* distinctiveness from other topic labels,
-* relevance to abusive relationship dynamics,
-* clarity for readers,
-* and consistency with the terminology used in the thesis.
+- the ten highest-ranked keywords,
+- the three posts with the highest topic probability scores,
+- the overall thematic focus suggested by the cluster,
+- and the distinction between the topic and other semantically similar topics.
 
-The final decision for each label was made by the researcher. ChatGPT-generated suggestions were treated as supporting material and were not used as automatic labels.
+This step was used to ensure that the labels were not based only on isolated keywords, but also reflected the contextual meaning of the posts assigned to each topic.
+
+Because the dataset concerned sensitive narratives of abusive relationships, the interpretation focused on broad thematic patterns rather than individual cases. No direct quotations from Reddit posts were used.
+
+## Step 3: AI-Assisted Label Suggestions
+
+In a second step, ChatGPT was used to generate preliminary topic label suggestions based on the same topic-level information.
+
+The AI-assisted labeling step was used as a support tool, not as an automatic decision-making procedure. The purpose was to generate alternative phrasings, identify possible overarching themes, and support reflection on whether the manually generated labels captured the main thematic content of each cluster.
+
+The AI-generated labels were compared with the researcher-generated labels. In some cases, the AI suggestions helped make labels more concise or more academically phrased. In other cases, the researcher-generated labels were retained because they better reflected the contextual meaning of the topic.
+
+## Step 4: Final Researcher-Led Synthesis
+
+The final topic labels were created by manually comparing and integrating:
+
+- the researcher-generated labels,
+- the AI-generated label suggestions,
+- the representative keywords,
+- the high-probability example posts,
+- and the broader research focus of the thesis.
+
+Final labels were selected based on the following criteria:
+
+- semantic fit with the topic keywords,
+- fit with the high-probability posts,
+- distinctiveness from other topic labels,
+- relevance to abusive relationship dynamics,
+- clarity for readers,
+- and consistency with the terminology used in the thesis.
+
+The final decision for each topic label was made by the researcher. AI-generated suggestions were treated as interpretive support only.
+
+## Step 5: Reintegration Into Analysis Outputs
+
+After finalizing the labels, the selected topic labels were integrated back into the BERTopic outputs. These labeled outputs were then used for:
+
+- topic overview tables,
+- topic count visualizations,
+- c-TF-IDF term visualizations,
+- intertopic distance maps,
+- topic similarity matrices,
+- sentiment analysis by topic,
+- emotion analysis by topic,
+- and final thesis reporting.
 
 ## Final Topic Labels
 
-| Topic | Final Label                                              |
-| ----- | -------------------------------------------------------- |
-| -1    | Outlier / Unclassified Posts                             |
-| 1     | Leaving Abusive Partners with Children and Custody Fears |
-| 2     | Trauma Bonding, Self-Blame, and Relationship Violence    |
-| 3     | Recognizing and Interpreting Abuse Dynamics              |
-| 4     | Healing and Emotional Recovery After Leaving Abuse       |
-| 5     | Post-Separation Harassment and Social Invalidation       |
-| 6     | Guilt, Self-Blame, and Emotional Coercion                |
-| 7     | Trauma Bonding and Early Recovery After Abuse            |
-| 8     | Emotional Blackmail and Psychological Manipulation       |
+The final interpreted topic labels were:
 
-Topic `-1` represents posts that BERTopic did not assign to a coherent thematic cluster. It was included for transparency but was not interpreted as one of the eight substantive topics.
+| Topic | Final Label |
+|---|---|
+| -1 | Outlier / Unclassified Posts |
+| 1 | Leaving Abusive Partners with Children and Custody Fears |
+| 2 | Trauma Bonding, Self-Blame, and Relationship Violence |
+| 3 | Recognizing and Interpreting Abuse Dynamics |
+| 4 | Healing and Emotional Recovery After Leaving Abuse |
+| 5 | Post-Separation Harassment and Social Invalidation |
+| 6 | Guilt, Self-Blame, and Emotional Coercion |
+| 7 | Trauma Bonding and Early Recovery After Abuse |
+| 8 | Emotional Blackmail and Psychological Manipulation |
 
-## Use in Later Analyses
-
-After the final labels were selected, they were integrated back into the BERTopic outputs. The labeled topic information was then used in the topic overview table, visualizations, topic similarity analyses, and topic-level sentiment and emotion analyses.
+Topic `-1` was included for transparency but was not interpreted as one of the eight substantive topic clusters.
 
 ## Ethical Note
 
-The repository does not include original Reddit post texts or direct quotations. This documentation therefore describes the labeling process at an aggregated level only. The final topic labels should be understood as interpretive summaries of model-generated clusters, not as fixed psychological categories or diagnostic classifications.
+Because the dataset contains sensitive online narratives about abusive relationships, this repository does not include original Reddit post texts or direct quotations. The labeling documentation therefore describes the interpretation procedure only at an aggregated level.
+
+The final labels should be understood as interpretive summaries of model-generated clusters, not as fixed psychological categories or diagnostic classifications.
 
 ## AI Use Note
 
-ChatGPT was used to support the topic labeling process by generating preliminary label suggestions and alternative phrasings. The final labels were reviewed, edited, and selected by the researcher, who remains responsible for the final interpretation.
+ChatGPT was used to support the topic labeling process by generating preliminary label suggestions and alternative phrasings. The final topic labels were reviewed, edited, and selected by the researcher. Responsibility for the final interpretation remains with the researcher.
