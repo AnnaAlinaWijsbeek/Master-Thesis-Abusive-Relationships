@@ -23,13 +23,31 @@ The repository provides the analysis code and supplementary materials used to su
 
 ## Repository Structure
 
-- `code/master_thesis_analysis_code.ipynb`: Main analysis notebook used for data preprocessing, BERTopic topic modelling, topic interpretation, sentiment analysis, emotion classification, visualisation, and statistical analysis.
-- `requirements.txt`: Python package requirements for running the analysis notebook.
-- `figures/`: Supplementary visualisations generated during the analysis.
-- `tables/`: Aggregated topic-level outputs and statistical result tables.
-- `outputs/`: Additional aggregated model outputs generated during the analysis.
-- `documentation/`: Additional documentation on model configuration, topic labelling, and ethical data handling.
-- `models/`: Model-related output files, if applicable.
+- [`code/`](code/): Main analysis notebook and analysis code.
+- [`requirements.txt`](requirements.txt): Python package requirements for running the analysis notebook.
+- [`figures/`](figures/): Interactive HTML visualisations generated during the analysis.
+- [`tables/`](tables/): Aggregated topic-level outputs and statistical result tables.
+- [`outputs/`](outputs/): Additional aggregated model outputs generated during the analysis.
+- [`documentation/`](documentation/): Additional documentation on model configuration, topic labelling, and ethical data handling.
+- [`models/`](models/): Model-related output files, if applicable.
+
+---
+
+## Analysis Code
+
+The main analysis notebook is available in the `code/` folder:
+
+- [`master_thesis_analysis_code.ipynb`](code/master_thesis_analysis_code.ipynb)
+
+The notebook includes the full analysis pipeline:
+
+1. Data preparation and cleaning  
+2. BERTopic topic modelling  
+3. Topic interpretation and topic labelling  
+4. Sentiment classification  
+5. Emotion classification  
+6. Visualisation of topic, sentiment, and emotion patterns  
+7. Statistical analyses across topics  
 
 ---
 
@@ -51,29 +69,29 @@ Interactive HTML versions of the figures are available below:
 
 ---
 
-## Tables
+## Supplementary Tables
 
-The `tables/` folder contains aggregated tables used to support the reported results, including topic-level summaries, sentiment outputs, emotion outputs, and statistical test results.
+Aggregated supplementary tables are available in the [`tables/`](tables/) folder.
+
+These tables include topic-level summaries, sentiment outputs, emotion outputs, and statistical test results used to support the reported findings.
 
 The tables are provided as supplementary material and do not contain raw Reddit post content.
 
 ---
 
-## Analysis Code
+## Supplementary Outputs
 
-The main analysis notebook is available in the `code/` folder:
+Additional aggregated outputs are available in the [`outputs/`](outputs/) folder.
 
-- [`master_thesis_analysis_code.ipynb`](code/master_thesis_analysis_code.ipynb)
+These files contain supplementary model outputs generated during the analysis. They are included to increase transparency of the computational workflow, but they do not include raw Reddit post content.
 
-The notebook includes the full analysis pipeline:
+---
 
-1. Data preparation and cleaning  
-2. BERTopic topic modelling  
-3. Topic interpretation and topic labelling  
-4. Sentiment classification  
-5. Emotion classification  
-6. Visualisation of topic, sentiment, and emotion patterns  
-7. Statistical analyses across topics  
+## Supplementary Documentation
+
+Additional documentation is available in the [`documentation/`](documentation/) folder.
+
+This documentation provides further information on model configuration, topic labelling, and ethical data handling. It is intended to make the analytical decisions behind the thesis more transparent.
 
 ---
 
