@@ -3,10 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Supplementary Materials – Master Thesis</title>
+
   <style>
+    * {
+      font-family: "Times New Roman", Times, serif;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      max-width: 950px;
+      max-width: 1050px;
       margin: 40px auto;
       padding: 0 24px;
       line-height: 1.6;
@@ -16,33 +20,40 @@
 
     header {
       background: #e6f0ea;
-      padding: 28px;
-      border-radius: 16px;
+      padding: 32px;
+      border-radius: 18px;
       margin-bottom: 32px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
 
     h1 {
       margin-top: 0;
       color: #234f3a;
+      font-size: 2.2em;
     }
 
     h2 {
       color: #234f3a;
       border-bottom: 2px solid #c7d8ce;
       padding-bottom: 6px;
-      margin-top: 36px;
+      margin-top: 8px;
+    }
+
+    h3 {
+      color: #2f6248;
+      margin-top: 24px;
     }
 
     .card {
       background: white;
-      padding: 20px;
-      border-radius: 14px;
-      margin-bottom: 18px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      padding: 24px;
+      border-radius: 16px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
     }
 
     a {
-      color: #1f6f4a;
+      color: #146b43;
       text-decoration: none;
       font-weight: 600;
     }
@@ -52,13 +63,27 @@
     }
 
     ul {
-      padding-left: 22px;
+      padding-left: 24px;
+    }
+
+    .meta {
+      color: #333;
+      margin-top: 16px;
+    }
+
+    .note {
+      background: #f0f5f1;
+      border-left: 4px solid #7fa88b;
+      padding: 12px 16px;
+      margin-top: 16px;
+      border-radius: 8px;
     }
 
     footer {
       margin-top: 40px;
       font-size: 0.9em;
       color: #555;
+      text-align: center;
     }
   </style>
 </head>
@@ -67,34 +92,44 @@
 
 <header>
   <h1>Supplementary Materials – Master Thesis</h1>
-  <p><strong>Text Mining Reddit Narratives of Abusive Relationships:</strong><br>
-  Topics and Emotion Patterns in Online Peer Support</p>
-  <p>Anna Alina Wijsbeek · University of Twente · July 2026</p>
+  <p>
+    <strong>Text Mining Reddit Narratives of Abusive Relationships:</strong><br>
+    Topics and Emotion Patterns in Online Peer Support
+  </p>
+  <p class="meta">
+    Anna Alina Wijsbeek · University of Twente · Master’s programme: Positive Clinical Psychology and Technology · July 2026
+  </p>
 </header>
 
 <section class="card">
   <h2>Overview</h2>
   <p>
-    This repository contains supplementary materials for a master thesis analysing
-    publicly available Reddit posts from r/abusiverelationships using BERTopic topic
-    modelling, transformer-based sentiment analysis, emotion classification,
-    visualisation, and statistical comparisons across topics.
+    This website provides supplementary materials for a master thesis analysing publicly available Reddit posts from
+    <em>r/abusiverelationships</em> using transformer-based text mining methods.
+    The analysis included BERTopic topic modelling, transformer-based sentiment analysis,
+    transformer-based emotion classification, visualisation, and statistical comparisons across topics.
   </p>
   <p>
-    Raw Reddit data are not included for ethical and privacy reasons.
+    The raw Reddit data are not included for ethical and privacy reasons.
   </p>
 </section>
 
 <section class="card">
   <h2>Analysis Code</h2>
+  <p>
+    The analysis code is available in the repository's <a href="code/">code folder</a>.
+  </p>
   <ul>
-    <li><a href="code/master_thesis_analysis_code.ipynb">Main analysis notebook</a></li>
-    <li><a href="requirements.txt">Python requirements</a></li>
+    <li><a href="code/01_data_scraping_R.R">01_data_scraping_R.R</a> – R script used for Reddit data extraction.</li>
+    <li><a href="code/02_master_thesis_analysis_code.ipynb">02_master_thesis_analysis_code.ipynb</a> – Main Python analysis notebook.</li>
   </ul>
 </section>
 
 <section class="card">
   <h2>Interactive Figures</h2>
+  <p>
+    Interactive HTML versions of the figures are available below.
+  </p>
   <ul>
     <li><a href="figures/figure_01_topic_document_counts.html">Figure 1: Topic Document Counts</a></li>
     <li><a href="figures/figure_02_topic_term_barchart.html">Figure 2: Topic Term Barchart</a></li>
@@ -111,25 +146,77 @@
 </section>
 
 <section class="card">
-  <h2>Supplementary Materials</h2>
+  <h2>Supplementary Tables</h2>
+  <p>
+    The following aggregated tables support the reported topic, sentiment, emotion, and statistical analyses.
+    These tables do not contain raw Reddit post content.
+  </p>
   <ul>
-    <li><a href="tables/">Supplementary tables</a></li>
-    <li><a href="outputs/">Aggregated outputs</a></li>
-    <li><a href="documentation/">Documentation</a></li>
-    <li><a href="models/">Model-related outputs</a></li>
+    <li><a href="tables/table_01_corpus_descriptive_statistics.csv">Table 1: Corpus Descriptive Statistics</a></li>
+    <li><a href="tables/table_02_topic_summary_labeled.csv">Table 2: Labelled Topic Summary</a></li>
+    <li><a href="tables/table_03_topic_model_diagnostics.csv">Table 3: Topic Model Diagnostics</a></li>
+    <li><a href="tables/table_04_topic_similarity_matrix_labeled.csv">Table 4: Labelled Topic Similarity Matrix</a></li>
+    <li><a href="tables/table_05_sentiment_summary_overall.csv">Table 5: Overall Sentiment Summary</a></li>
+    <li><a href="tables/table_06_chi_square_sentiment_summary.xlsx">Table 6: Chi-Square Sentiment Summary</a></li>
+    <li><a href="tables/table_07_chi_square_sentiment_observed.xlsx">Table 7: Chi-Square Sentiment Observed Counts</a></li>
+    <li><a href="tables/table_08_chi_square_sentiment_expected.xlsx">Table 8: Chi-Square Sentiment Expected Counts</a></li>
+    <li><a href="tables/table_09_anova_results_emotions.xlsx">Table 9: ANOVA Results for Emotions</a></li>
+    <li><a href="tables/table_10_tukey_posthoc_results.xlsx">Table 10: Tukey Post-Hoc Results</a></li>
+    <li><a href="tables/table_11_emotion_correlation_matrix.csv">Table 11: Emotion Correlation Matrix</a></li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>Supplementary Documentation</h2>
+  <p>
+    Additional documentation is provided to increase transparency regarding analytical decisions.
+  </p>
+  <ul>
+    <li><a href="documentation/topic_labeling_process">Topic Labelling Process</a></li>
+  </ul>
+  <div class="note">
+    Note: The linked documentation file currently appears without a file extension in the repository.
+    If the file is later renamed to <code>topic_labeling_process.md</code> or <code>topic_labeling_process.txt</code>,
+    the link should be updated accordingly.
+  </div>
+</section>
+
+<section class="card">
+  <h2>Model-Related Files</h2>
+  <p>
+    Stored BERTopic model-related files are provided to document the computational workflow.
+  </p>
+  <ul>
+    <li><a href="models/bertopic_model/config.json">config.json</a></li>
+    <li><a href="models/bertopic_model/ctfidf.safetensors">ctfidf.safetensors</a></li>
+    <li><a href="models/bertopic_model/ctfidf_config.json">ctfidf_config.json</a></li>
+    <li><a href="models/bertopic_model/topic_embeddings.safetensors">topic_embeddings.safetensors</a></li>
+    <li><a href="models/bertopic_model/topics.json">topics.json</a></li>
   </ul>
 </section>
 
 <section class="card">
   <h2>Ethical Data Handling</h2>
   <p>
-    The analysis was based on publicly available Reddit posts. No verbatim Reddit
-    posts or comments are reproduced. Results are reported in aggregated form only.
-    Raw Reddit data are not publicly shared to reduce the risk of user identification.
+    The analysis was based on publicly available Reddit posts from <em>r/abusiverelationships</em>.
+    To reduce the risk of user identification, the raw Reddit data are not included in this repository.
   </p>
   <p>
-    Ethical approval was granted by the BMS Ethical Committee / Domain Humanities
-    & Social Sciences at the University of Twente. Application number: 260022.
+    No verbatim Reddit posts or comments are reproduced. Results are reported in aggregated form only.
+    The repository contains only code, aggregated outputs, visualisations, model-related files, and supplementary documentation.
+  </p>
+  <p>
+    Ethical approval was granted by the BMS Ethical Committee / Domain Humanities & Social Sciences
+    at the University of Twente. Application number: 260022.
+  </p>
+</section>
+
+<section class="card">
+  <h2>Data Availability</h2>
+  <p>
+    The raw Reddit data are not publicly shared due to ethical and privacy considerations.
+    The materials provided here are sufficient to inspect the computational workflow and aggregated results,
+    but they do not enable reconstruction of individual Reddit posts.
   </p>
 </section>
 
@@ -137,8 +224,7 @@
   <h2>Citation</h2>
   <p>
     Wijsbeek, A. A. (2026). <em>Text Mining Reddit Narratives of Abusive Relationships:
-    Topics and Emotion Patterns in Online Peer Support</em> [Master’s thesis,
-    University of Twente].
+    Topics and Emotion Patterns in Online Peer Support</em> [Master’s thesis, University of Twente].
   </p>
 </section>
 
