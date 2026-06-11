@@ -1,0 +1,7 @@
+Metric,Value
+Number of documents,988.0
+Number of topics excluding outliers,8.0
+Number of outliers,231.0
+Outlier share,0.2338
+Coherence C_v,0.3113
+Coherence NPMI,-0.4181
