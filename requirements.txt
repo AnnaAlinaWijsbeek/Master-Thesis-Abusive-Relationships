@@ -1,0 +1,17 @@
+bertopic==0.17.4
+sentence-transformers
+umap-learn
+hdbscan
+scikit-learn
+gensim
+transformers
+accelerate
+plotly
+kaleido
+openpyxl
+scipy
+statsmodels
+pandas
+numpy
+torch
+tqdm
