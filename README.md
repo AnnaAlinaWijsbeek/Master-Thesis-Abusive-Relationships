@@ -23,23 +23,23 @@ The repository provides the analysis code and supplementary materials used to su
 
 ## Repository Structure
 
-- [`code/`](code/): Main analysis notebook and analysis code.
-- [`requirements.txt`](requirements.txt): Python package requirements for running the analysis notebook.
+- [`code/`](code/): R scraping script and Python analysis notebook.
 - [`figures/`](figures/): Interactive HTML visualisations generated during the analysis.
 - [`tables/`](tables/): Aggregated topic-level outputs and statistical result tables.
-- [`outputs/`](outputs/): Additional aggregated model outputs generated during the analysis.
-- [`documentation/`](documentation/): Additional documentation on model configuration, topic labelling, and ethical data handling.
-- [`models/`](models/): Model-related output files, if applicable.
+- [`documentation/`](documentation/): Additional documentation on topic labelling and analytical decisions.
+- [`models/`](models/): Stored BERTopic model-related files.
+- [`outputs/`](outputs/): Folder reserved for additional aggregated outputs, if applicable.
 
 ---
 
 ## Analysis Code
 
-The main analysis notebook is available in the `code/` folder:
+The analysis code is available in the [`code/`](code/) folder:
 
-- [`master_thesis_analysis_code.ipynb`](code/master_thesis_analysis_code.ipynb)
+- [`01_data_scraping_R.R`](code/01_data_scraping_R.R): R script used for Reddit data extraction.
+- [`02_master_thesis_analysis_code.ipynb`](code/02_master_thesis_analysis_code.ipynb): Main Python analysis notebook.
 
-The notebook includes the full analysis pipeline:
+The main notebook includes the full analysis pipeline:
 
 1. Data preparation and cleaning  
 2. BERTopic topic modelling  
@@ -71,33 +71,53 @@ Interactive HTML versions of the figures are available below:
 
 ## Supplementary Tables
 
-Aggregated supplementary tables are available in the [`tables/`](tables/) folder.
+Aggregated supplementary tables are available below:
 
-These tables include topic-level summaries, sentiment outputs, emotion outputs, and statistical test results used to support the reported findings.
+- [Table 1: Corpus Descriptive Statistics](tables/table_01_corpus_descriptive_statistics.csv)
+- [Table 2: Labelled Topic Summary](tables/table_02_topic_summary_labeled.csv)
+- [Table 3: Topic Model Diagnostics](tables/table_03_topic_model_diagnostics.csv)
+- [Table 4: Labelled Topic Similarity Matrix](tables/table_04_topic_similarity_matrix_labeled.csv)
+- [Table 5: Overall Sentiment Summary](tables/table_05_sentiment_summary_overall.csv)
+- [Table 6: Chi-Square Sentiment Summary](tables/table_06_chi_square_sentiment_summary.xlsx)
+- [Table 7: Chi-Square Sentiment Observed Counts](tables/table_07_chi_square_sentiment_observed.xlsx)
+- [Table 8: Chi-Square Sentiment Expected Counts](tables/table_08_chi_square_sentiment_expected.xlsx)
+- [Table 9: ANOVA Results for Emotions](tables/table_09_anova_results_emotions.xlsx)
+- [Table 10: Tukey Post-Hoc Results](tables/table_10_tukey_posthoc_results.xlsx)
+- [Table 11: Emotion Correlation Matrix](tables/table_11_emotion_correlation_matrix.csv)
 
 The tables are provided as supplementary material and do not contain raw Reddit post content.
 
 ---
 
-## Supplementary Outputs
+## Supplementary Documentation
 
-Additional aggregated outputs are available in the [`outputs/`](outputs/) folder.
+Additional documentation is available in the [`documentation/`](documentation/) folder:
 
-These files contain supplementary model outputs generated during the analysis. They are included to increase transparency of the computational workflow, but they do not include raw Reddit post content.
+- [Topic Labelling Process](documentation/topic_labeling_process)
+
+This documentation describes the topic labelling process and supports transparency regarding the interpretation of BERTopic outputs.
 
 ---
 
-## Supplementary Documentation
+## Model-Related Files
 
-Additional documentation is available in the [`documentation/`](documentation/) folder.
+The stored BERTopic model files are available in the [`models/bertopic_model/`](models/bertopic_model/) folder:
 
-This documentation provides further information on model configuration, topic labelling, and ethical data handling. It is intended to make the analytical decisions behind the thesis more transparent.
+- [`config.json`](models/bertopic_model/config.json)
+- [`ctfidf.safetensors`](models/bertopic_model/ctfidf.safetensors)
+- [`ctfidf_config.json`](models/bertopic_model/ctfidf_config.json)
+- [`topic_embeddings.safetensors`](models/bertopic_model/topic_embeddings.safetensors)
+- [`topics.json`](models/bertopic_model/topics.json)
+
+These files are included to document the computational workflow and do not contain raw Reddit post content.
 
 ---
 
 ## Requirements
 
-The Python package requirements are listed in:
+The analysis was conducted in Google Colab using Python 3.12.12.
+
+If package requirements are provided, they are listed in:
 
 - [`requirements.txt`](requirements.txt)
 
