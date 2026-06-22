@@ -1,0 +1,29 @@
+﻿Emotion;group1;group2;meandiff;p-adj;lower;upper;reject
+disgust;Emotional Blackmail and Psychological Manipulation;Guilt, Self-Blame, and Emotional Coercion;-0,2576;0,0001;-0,4213;-0,0939;TRUE
+disgust;Emotional Blackmail and Psychological Manipulation;Healing and Emotional Recovery After Leaving Abuse;0,1315;0,1913;-0,0275;0,2906;FALSE
+disgust;Emotional Blackmail and Psychological Manipulation;Leaving Abusive Partners with Children and Custody Fears;0,1198;0,1813;-0,0237;0,2633;FALSE
+disgust;Emotional Blackmail and Psychological Manipulation;Post-Separation Harassment and Social Invalidation;0,1255;0,2433;-0,0335;0,2846;FALSE
+disgust;Emotional Blackmail and Psychological Manipulation;Recognizing and Interpreting Abuse Dynamics;0,0883;0,639;-0,0631;0,2396;FALSE
+disgust;Emotional Blackmail and Psychological Manipulation;Trauma Bonding and Early Recovery After Abuse;0,1853;0,0396;0,0047;0,3659;TRUE
+disgust;Emotional Blackmail and Psychological Manipulation;Trauma Bonding, Self-Blame, and Relationship Violence;0,1936;0,0016;0,0477;0,3395;TRUE
+disgust;Guilt, Self-Blame, and Emotional Coercion;Healing and Emotional Recovery After Leaving Abuse;0,3891;0;0,2592;0,5191;TRUE
+disgust;Guilt, Self-Blame, and Emotional Coercion;Leaving Abusive Partners with Children and Custody Fears;0,3774;0;0,267;0,4878;TRUE
+disgust;Guilt, Self-Blame, and Emotional Coercion;Post-Separation Harassment and Social Invalidation;0,3831;0;0,2532;0,5131;TRUE
+disgust;Guilt, Self-Blame, and Emotional Coercion;Recognizing and Interpreting Abuse Dynamics;0,3459;0;0,2254;0,4663;TRUE
+disgust;Guilt, Self-Blame, and Emotional Coercion;Trauma Bonding and Early Recovery After Abuse;0,4429;0;0,2873;0,5985;TRUE
+disgust;Guilt, Self-Blame, and Emotional Coercion;Trauma Bonding, Self-Blame, and Relationship Violence;0,4512;0;0,3377;0,5647;TRUE
+disgust;Healing and Emotional Recovery After Leaving Abuse;Leaving Abusive Partners with Children and Custody Fears;-0,0117;1;-0,1151;0,0917;FALSE
+disgust;Healing and Emotional Recovery After Leaving Abuse;Post-Separation Harassment and Social Invalidation;-0,006;1;-0,1301;0,1181;FALSE
+disgust;Healing and Emotional Recovery After Leaving Abuse;Recognizing and Interpreting Abuse Dynamics;-0,0432;0,9448;-0,1573;0,0708;FALSE
+disgust;Healing and Emotional Recovery After Leaving Abuse;Trauma Bonding and Early Recovery After Abuse;0,0538;0,9601;-0,097;0,2045;FALSE
+disgust;Healing and Emotional Recovery After Leaving Abuse;Trauma Bonding, Self-Blame, and Relationship Violence;0,0621;0,6423;-0,0446;0,1688;FALSE
+disgust;Leaving Abusive Partners with Children and Custody Fears;Post-Separation Harassment and Social Invalidation;0,0057;1;-0,0977;0,1091;FALSE
+disgust;Leaving Abusive Partners with Children and Custody Fears;Recognizing and Interpreting Abuse Dynamics;-0,0315;0,9662;-0,1226;0,0596;FALSE
+disgust;Leaving Abusive Partners with Children and Custody Fears;Trauma Bonding and Early Recovery After Abuse;0,0655;0,8167;-0,0687;0,1997;FALSE
+disgust;Leaving Abusive Partners with Children and Custody Fears;Trauma Bonding, Self-Blame, and Relationship Violence;0,0738;0,1112;-0,0079;0,1555;FALSE
+disgust;Post-Separation Harassment and Social Invalidation;Recognizing and Interpreting Abuse Dynamics;-0,0373;0,9754;-0,1513;0,0768;FALSE
+disgust;Post-Separation Harassment and Social Invalidation;Trauma Bonding and Early Recovery After Abuse;0,0597;0,9306;-0,091;0,2105;FALSE
+disgust;Post-Separation Harassment and Social Invalidation;Trauma Bonding, Self-Blame, and Relationship Violence;0,068;0,525;-0,0387;0,1748;FALSE
+disgust;Recognizing and Interpreting Abuse Dynamics;Trauma Bonding and Early Recovery After Abuse;0,097;0,437;-0,0456;0,2396;FALSE
+disgust;Recognizing and Interpreting Abuse Dynamics;Trauma Bonding, Self-Blame, and Relationship Violence;0,1053;0,0176;0,0105;0,2002;TRUE
+disgust;Trauma Bonding and Early Recovery After Abuse;Trauma Bonding, Self-Blame, and Relationship Violence;0,0083;1;-0,1285;0,1451;FALSE
