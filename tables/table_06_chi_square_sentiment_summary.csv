@@ -1,0 +1,2 @@
+﻿Test;Variable_1;Variable_2;Chi_square;df;p;Expected_cells_below_5;p_formatted
+Chi-square test of independence;Topic;Sentiment label;106,4120513;14;2,76819E-16;8;< .001
